@@ -1,0 +1,12 @@
+#main{
+    width: 480px; 
+    height: 100%;
+    margin: 0 auto;
+    background: url(../images2/bg.jpg) repeat-y;
+    position: relative;
+    #list{
+        width: 200px;
+        position: absolute;
+        left: 140px; top: 150px;
+    }    
+}
