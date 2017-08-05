@@ -1,0 +1,146 @@
+
+
+git 操作：
+
+1、安装git 
+
+2、$git 命令 检查是否安装了git。
+
+3、新建仓库目录 命令：$mkdir gitname 
+  
+   查看目录下文件 命令 $ ls
+
+
+4、进入仓库目录 命令：$cd gitname
+
+5、将该目录变成Git可管理的仓库 命令: $git init
+
+6.提交：
+
+   如：将一个需要提交到版本库的文件readme 放到gitname下
+   
+   1. 使用git add 命令告诉 Git，把文件添加到仓库
+	命令：git add readme.txt
+
+    2. 使用git commit命令告诉Git, 把文件提交到仓库(后面是log信息)
+	$git commit -m “add new file readme.txt
+
+7. 修改文件内容 
+
+     1, 修改readme.txt的内容:
+
+     2, 使用git status查看状态(文件是否有修改):
+     $git status
+
+     3, 使用git diff查看修改前后的区别:
+      $git diff
+
+     4, 使用git add和git commit再次提交:
+      
+      $git add readme.txt
+      $git commit -m “commit changes readme.txt”
+
+8.版本回退
+
+
+	1， 使用git log查看历史日志(或者使用:git log --pretty=oneline):
+	    
+	    $git log
+	2, 在Git中, HEAD表示当前版本, 也就是最新版本, 上一个版本使用
+	   HEAD^ , 上上个版本使用HEAD^^, 往上100个版本使用HEAD~100, 然后
+	   使用git reset命令回退:
+
+	   $git reset —-hard HEAD^
+
+
+
+	3, 上面的方式是回退, 如果又想继续回到之前的高版本怎么办呢, git也是有办法的, 我们只要找到该高版本的commit id,再执行以下命令即
+可:(commit id只要写前部分即可)
+	   $git reset —-hard 2044be7c
+	
+	4, 使用git reflog可以查看你执行过的命令记录
+	   $git reflog
+
+
+
+9. GitHub创建远程仓库
+
+1, 登录https://github.com/ 注册GitHub账号,并登录;
+
+2, 创建SSH Key;
+
+	2.1, 生成rsa私钥和公钥(邮箱地址写自己的邮箱, 然后一路按回车)
+$ssh-keygen -t rsa -C “610567895@qq.com” 
+	2.2, 进入电脑用户的目录查看私钥和公钥(把ijeff换成你电脑的用户名)
+$cd /c/Users/ijeff/.ssh/
+
+3, 在GitHub上添加SSH Key:https://github.com/settings/ssh, 将公钥
+id_rsa.pub里面的值添加到远程新建仓库的SSH and GPG keys 里面的 Key中
+
+4, 在GitHub上添加远程仓库(填入仓库名称,其他默认即可)
+  -> new repository
+  -> name
+  -> 按默认操作 
+
+5, 将GitHub远程仓库和本地仓库关联, 并将本地仓库推送(push)到远程仓
+库;
+
+5.1, 在终端中使用cd命令进入本地的仓库目录下
+
+5.2, 远程仓库和本地仓库建立关联; 根据上面4.4的提示, 在本地的仓
+库目录下执行以下命令:(其中origin是GitHub远程仓库的名称, jianwuhennie是
+GitHub的用户名)
+
+$git remote add origin https://github.com/jianwuhennie/mygit2.git
+
+或者
+ $git remote add origin git@github.com:jianwuhennie/mygit2.git
+(以上两种写法都可以, git协议和https协议, git协议较快)
+
+5.3, 将本地仓库内容推送到远程仓库;(其中master是仓库下的分支, 第一次push 需要加上-u参数) 执行以下命令来进行推送(push), 过程中可能需要
+输入GitHub的用户名和密码
+	
+	$git push -u origin master
+以后push就不需要再加-u参数
+	$git push origin master
+
+
+10.   将远程仓库克隆(clone)到本地仓库
+
+1, 在终端中使用cd命令进入你需要创建本地仓库的指定目录
+
+2, 执行clone命令:
+$git clone https://github.com/jianwuhennie/mygit3.git
+或者 $git clone git@github.com:jianwuhennie/mygit3.git
+如有以下警告,则输入yes
+Are you sure you want to continue connecting (yes/no)? yes
+
+
+11. 修改远程仓库的文件或内容：
+
+1，需要在本地仓库进行修改 分两步：
+	a：将修改后的文件在本地仓库上执行
+	$git add 操作
+	b:执行 
+	$git commit -m 操作
+
+2，执行git pull 命令 将修改后的文件上传到github远程服务器上
+
+	$git pull
+
+
+12. 克隆仓库代码同步远程仓库
+	
+	执行git pull 加上远程仓库链接 就可以同步远程仓库代码
+
+	$git pull https://github.com/Hohuade/mygit.git
+
+
+
+
+
+13. Helloween
+
+
+
+
