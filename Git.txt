@@ -139,8 +139,15 @@ Are you sure you want to continue connecting (yes/no)? yes
 
 
 
-13. Helloween
 
+13. 如何删除仓库中不必要的文件：
+	使用git rm命令删掉要删除的文件。具体命令是 git rm 文件名，大家可	以把rm当做remove的缩写，方便记忆
+	命令：git rm +需要删除的文件
+	
+	重新执行提交命令：
+	 git commit -m “删除了xx文件”
+	重新提交远程仓库：
+	git push
 
 
 
