@@ -6,7 +6,7 @@ git 操作：
 
 2、$git 命令 检查是否安装了git。
 
-3、新建仓库目录 命令：$mkdir gitname 
+3、新建仓库目录命名为gitname（自己命名）  命令：$mkdir gitname 
   
    查看目录下文件 命令 $ ls
 
@@ -91,10 +91,10 @@ id_rsa.pub里面的值添加到远程新建仓库的SSH and GPG keys 里面的 Key中
 库目录下执行以下命令:(其中origin是GitHub远程仓库的名称, jianwuhennie是
 GitHub的用户名)
 
-$git remote add origin https://github.com/jianwuhennie/mygit2.git
+$git remote add origin https://github.com/Hohuade/mygit.git
 
 或者
- $git remote add origin git@github.com:jianwuhennie/mygit2.git
+ $git remote add origin git@github.com/Hohuade/mygit.git
 (以上两种写法都可以, git协议和https协议, git协议较快)
 
 5.3, 将本地仓库内容推送到远程仓库;(其中master是仓库下的分支, 第一次push 需要加上-u参数) 执行以下命令来进行推送(push), 过程中可能需要
@@ -110,8 +110,8 @@ $git remote add origin https://github.com/jianwuhennie/mygit2.git
 1, 在终端中使用cd命令进入你需要创建本地仓库的指定目录
 
 2, 执行clone命令:
-$git clone https://github.com/jianwuhennie/mygit3.git
-或者 $git clone git@github.com:jianwuhennie/mygit3.git
+$git clone https://github.com/Hohuade/mygit.git
+或者 $git clone git@github.com/Hohuade/mygit.git
 如有以下警告,则输入yes
 Are you sure you want to continue connecting (yes/no)? yes
 
@@ -131,7 +131,7 @@ Are you sure you want to continue connecting (yes/no)? yes
 
 12. 克隆仓库代码同步远程仓库
 	
-	执行git pull 加上远程仓库链接 就可以同步远程仓库代码
+	执行git pull 加上远程仓库链接 就可以将远程仓库代码同步到本地创库
 
 	$git pull https://github.com/Hohuade/mygit.git
 
