@@ -1,6 +1,6 @@
 {
-  "name": "encode-fe-commitlint-config",
-  "version": "0.0.3",
+  "name": "lumos-commitlint-validator",
+  "version": "0.0.1",
   "main": "index.js",
   "description": "Git规范",
   "keywords": [
