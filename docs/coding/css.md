@@ -1,12 +1,12 @@
 ---
 title: CSS 编码规范
 categories:
-    - 编码规范
+  - 编码规范
 tags:
-    - 编码规范
+  - 编码规范
 author:
-    name: 澄怀
-    link: https://github.com/encode-studio-fe/fe-spec
+  name: Hohuade
+  link: https://github.com/Hohuade/fe-spec
 ---
 
 # CSS 编码规范
@@ -22,7 +22,7 @@ author:
 详细规则如下：
 
 - 1.1.1.【强制】所有声明都应该以分号结尾，不能省略。`stylelint`: [declaration-block-trailing-semicolon](https://stylelint.io/user-guide/rules/declaration-block-trailing-semicolon)
-  
+
   虽然 `CSS` 语法中最后一条声明的分号是可选的，但是使用分号可以增加代码的一致性和易用性。
 
   ```css
@@ -44,42 +44,42 @@ author:
   ```css
   /* bad */
   .selector {
-      padding-left: 15px;
+  	padding-left: 15px;
   }
 
   /* good */
   .selector {
-    padding-left: 15px;
+  	padding-left: 15px;
   }
   ```
 
-- 1.1.3.【推荐】选择器和 `{` 之间保留一个空格。`stylelint`: [block-opening-brace-space-before](https://stylelint.io/user-guide/rules/block-opening-brace-space-before) 
-
-  ```css
-  /* bad */
-  .selector{
-    padding-left: 15px;
-  }
-
-  /* good */
-  .selector {
-    padding-left: 15px;
-  }
-  ```
-
-- 1.1.4.【推荐】属性名和 `:` 之前无空格，`:` 和属性值之间保留一个空格。`stylelint`: [declaration-colon-space-after](https://stylelint.io/user-guide/rules/declaration-colon-space-after) [declaration-colon-space-before](https://stylelint.io/user-guide/rules/declaration-colon-space-before) 
+- 1.1.3.【推荐】选择器和 `{` 之间保留一个空格。`stylelint`: [block-opening-brace-space-before](https://stylelint.io/user-guide/rules/block-opening-brace-space-before)
 
   ```css
   /* bad */
   .selector {
-    margin-top : 10px;
-    padding-left:15px;
+  	padding-left: 15px;
   }
 
   /* good */
   .selector {
-    margin-top: 10px;
-    padding-left: 15px;
+  	padding-left: 15px;
+  }
+  ```
+
+- 1.1.4.【推荐】属性名和 `:` 之前无空格，`:` 和属性值之间保留一个空格。`stylelint`: [declaration-colon-space-after](https://stylelint.io/user-guide/rules/declaration-colon-space-after) [declaration-colon-space-before](https://stylelint.io/user-guide/rules/declaration-colon-space-before)
+
+  ```css
+  /* bad */
+  .selector {
+  	margin-top: 10px;
+  	padding-left: 15px;
+  }
+
+  /* good */
+  .selector {
+  	margin-top: 10px;
+  	padding-left: 15px;
   }
   ```
 
@@ -87,19 +87,19 @@ author:
 
   ```css
   /* bad */
-  .selector>.children {
-    padding-left: 15px;
+  .selector > .children {
+  	padding-left: 15px;
   }
-  .selector+.brother {
-    padding-left: 15px;
+  .selector + .brother {
+  	padding-left: 15px;
   }
 
   /* good */
   .selector > .children {
-    padding-left: 15px;
+  	padding-left: 15px;
   }
   .selector + .brother {
-    padding-left: 15px;
+  	padding-left: 15px;
   }
   ```
 
@@ -108,14 +108,14 @@ author:
   ```css
   /* bad */
   .selector {
-    background-color: rgba(0,0,0,0.5);
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.5);
+  	background-color: rgba(0, 0, 0, 0.5);
+  	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   /* good */
   .selector {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  	background-color: rgba(0, 0, 0, 0.5);
+  	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
   ```
 
@@ -124,21 +124,21 @@ author:
   ```css
   /* bad */
   .selector {
-    /*comment*/
-    /*  comment  */
-    /**
+  	/*comment*/
+  	/*  comment  */
+  	/**
      *comment
      */
-    padding-left: 15px;
+  	padding-left: 15px;
   }
 
   /* good */
   .selector {
-    /* comment */
-    /**
+  	/* comment */
+  	/**
      * comment
      */
-    padding-left: 15px;
+  	padding-left: 15px;
   }
   ```
 
@@ -147,11 +147,12 @@ author:
   ```css
   /* bad */
   .selector {
-    padding-left: 15px;}
+  	padding-left: 15px;
+  }
 
   /* good */
   .selector {
-    padding-left: 15px;
+  	padding-left: 15px;
   }
   ```
 
@@ -160,16 +161,16 @@ author:
   ```css
   /* bad */
   .selector {
-    padding-left: 15px;  margin-left: 10px;
+  	margin-left: 10px;
+  	padding-left: 15px;
   }
 
   /* good */
   .selector {
-    padding-left: 15px;
-    margin-left: 10px;
+  	margin-left: 10px;
+  	padding-left: 15px;
   }
   ```
-
 
 - 1.1.10.【推荐】单行代码最多不要超过 100 个字符。 `stylelint`: [max-line-length](https://stylelint.io/user-guide/rules/max-line-length) 除了以下两种情况：
 
@@ -178,33 +179,41 @@ author:
 
   ```css
   /* bad */
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.04, rgb(88, 94, 124)), color-stop(0.52, rgb(115, 123, 162)));
+  background-image: -webkit-gradient(
+  	linear,
+  	left bottom,
+  	left top,
+  	color-stop(0.04, rgb(88, 94, 124)),
+  	color-stop(0.52, rgb(115, 123, 162))
+  );
 
   /* good */
   background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.04, rgb(88, 94, 124)),
-    color-stop(0.52, rgb(115, 123, 162))
+  	linear,
+  	left bottom,
+  	left top,
+  	color-stop(0.04, rgb(88, 94, 124)),
+  	color-stop(0.52, rgb(115, 123, 162))
   );
   ```
 
 - 1.1.11.【参考】使用多个选择器时，每个选择器应该单独成行。`stylelint`: [selector-list-comma-newline-after](https://stylelint.io/user-guide/rules/selector-list-comma-newline-after)
-  
+
   ```css
   /* bad */
-  .selector, .selector-secondary, .selector-third {
-    padding: 15px;
-    margin-bottom: 15px;
+  .selector,
+  .selector-secondary,
+  .selector-third {
+  	margin-bottom: 15px;
+  	padding: 15px;
   }
 
   /* good */
   .selector,
   .selector-secondary,
   .selector-third {
-    padding: 15px;
-    margin-bottom: 15px;
+  	margin-bottom: 15px;
+  	padding: 15px;
   }
   ```
 
@@ -212,11 +221,13 @@ author:
 
   ```css
   /* bad */
-  .selector { padding-left: 15px; }
+  .selector {
+  	padding-left: 15px;
+  }
 
   /* good */
   .selector {
-    padding-left: 15px;
+  	padding-left: 15px;
   }
   ```
 
@@ -225,44 +236,43 @@ author:
   ```css
   /* bad */
   .selector {
+  	 /* comment *
+  	padding-right: 15px; * comment */
 
-    /* comment */
-    padding-left: 15px;
-    /* comment */
-    padding-right: 15px;
+  	padding-left: 15px;
   }
 
   /* good */
   .selector {
-    /* comment */
-    padding-left: 15px;
+  	* comment */
 
-    /* comment */
-    padding-right: 15px;
+  	padding-right: 15px; * comment */
+
+  	padding-left: 15px;
   }
   ```
 
 ### 1.2. 选择器
 
 - 1.2.1.【参考】不要使用 `id` 选择器。`stylelint`: [selector-max-id](https://stylelint.io/user-guide/rules/selector-max-id)
-  
+
   `id` 会带来过高的[选择器优先级](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)，使得后续很难进行样式覆盖（继而引发使用 `!important` 覆盖样式的恶性循环）。
 
   ```css
   /* bad */
   .normal {
-    padding: 10px;
+  	padding: 10px;
   }
   #special {
-    padding: 15px;
+  	padding: 15px;
   }
 
   /* good */
   .normal {
-    padding: 10px;
+  	padding: 10px;
   }
   .normal.special {
-    padding: 15px;
+  	padding: 15px;
   }
   ```
 
@@ -272,13 +282,13 @@ author:
 
   ```css
   /* bad */
-  input[type=text] {
-    height: 20px;
+  input[type='text'] {
+  	height: 20px;
   }
 
   /* good */
-  input[type="text"] {
-    height: 20px;
+  input[type='text'] {
+  	height: 20px;
   }
   ```
 
@@ -301,18 +311,18 @@ author:
   > - 伪类（伪元素）选择器，比如 `a:hover`、`a::before`
 
 ### 1.3. 属性和属性值
-  
+
 - 1.3.1.【推荐】使用尽可能短的十六进制值。`stylelint`: [color-hex-length](https://stylelint.io/user-guide/rules/color-hex-length)
 
   ```css
   /* bad */
   .selector {
-    color: #ffffff;
+  	color: #ffffff;
   }
 
   /* good */
   .selector {
-    color: #fff;
+  	color: #fff;
   }
   ```
 
@@ -323,12 +333,12 @@ author:
   ```css
   /* bad */
   .selector {
-    color: #FEFEFE;
+  	color: #fefefe;
   }
 
   /* good */
   .selector {
-    color: #fefefe;
+  	color: #fefefe;
   }
   ```
 
@@ -339,14 +349,14 @@ author:
   ```css
   /* bad */
   .selector {
-    margin-top: 0px;
-    font-size: 0em;
+  	margin-top: 0px;
+  	font-size: 0em;
   }
 
   /* good */
   .selector {
-    margin-top: 0;
-    font-size: 0;
+  	margin-top: 0;
+  	font-size: 0;
   }
   ```
 
@@ -357,14 +367,14 @@ author:
   ```css
   /* bad */
   .selector {
-    opacity: .5;
-    left: -.5px;
+  	left: -0.5px;
+  	opacity: 0.5;
   }
 
   /* good */
   .selector {
-    opacity: 0.5;
-    left: -0.5px;
+  	left: -0.5px;
+  	opacity: 0.5;
   }
   ```
 
@@ -384,7 +394,7 @@ author:
   1. **定位**：如 `position`、`left`、`right`、`top`、`bottom`、`z-index`
   2. **盒模型**：如 `display`、`float`、`width`、`height`、`margin`、`padding`、`border`
   3. **文字排版**：如 `font`、`color`、`line-height`、`text-align`
-  4. **外观**：如  `background`
+  4. **外观**：如 `background`
   5. **其他属性**
 
   「定位」和「盒模型」放在最前面，是因为它们决定了元素的布局、位置和尺寸。「定位」排在「盒模型」之前，是由于「定位」属性可以让元素脱离正常文本流，从而使「盒模型」属性失效。
@@ -393,62 +403,58 @@ author:
 
   ```css
   .declaration-order {
-    /* 定位 */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
+  	/* 定位 */
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	z-index: 100;
 
-    /* 盒模型 */
-    display: block;
-    float: right;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #e5e5e5;
+  	/* 盒模型 */
+  	display: block;
+  	float: right;
+  	width: 100px;
+  	height: 100px;
+  	color: #333; d #e5e5e
+  	font: normal 13px 'Helvetica Neue', sans-serif;
+  	line-height: 1.5;
+  	text-align: center; 33;
+    te
+  	background-color: #f5f5f5;
+  	border: 1px solid #e5e5e5;
 
-    /* 排版 */
-    font: normal 13px "Helvetica Neue", sans-serif;
-    line-height: 1.5;
-    color: #333;
-    text-align: center;
-
-    /* 外观 */
-    background-color: #f5f5f5;
-
-    /* 其他 */
-    opacity: 1;
+  	/* 其他 */
+  	opacity: 1;
   }
   ```
 
   更多 CSS 属性顺序参考如下列表：
-  
-  |第一组|第二组|第三组|第四组|第五组|第六组|第七组|
-  |----|----|----|----|----|----|----|
-  |content |box-sizing|background*         |font*|opacity       |unicode-bidi|transition*|
-  |position|*width    |color               |src|visibility    |direction   |transform* |
-  |top     |*height   |box-decoration-break|line-height|filter        |columns     |animation* |
-  |right   |margin*   |box-shadow          |letter-spacing|resize        |column-*    ||
-  |bottom  |padding*  |outline*            |quotes|cursor        |break-*     ||
-  |left    |border*   |table-layout        |counter-*|pointer-events|page-break-*||
-  |z-index |          |caption-side        |-ms-writing-mode|user-select   |orphans     ||
-  |display |          |empty-cells         |text-*||widows||
-  |vertical-align|    |list-style*         |white-space||*zoom||
-  |flex*   |          |                    |word-*||orientation||
-  |grid*   |          |                    |overflow-wrap||fill||
-  |*gap    |          |                    |tab-size||stroke||
-  |align-* |          |                    |hyphens||||
-  |justify-*|         |                    |interpolation-mode||||
-  |order|||||||
-  |float|||||||
-  |clear|||||||
-  |object-fit|||||||
-  |overflow*|||||||
-  |clip|||||||
+
+  | 第一组         | 第二组     | 第三组               | 第四组             | 第五组         | 第六组        | 第七组       |
+  | -------------- | ---------- | -------------------- | ------------------ | -------------- | ------------- | ------------ |
+  | content        | box-sizing | background\*         | font\*             | opacity        | unicode-bidi  | transition\* |
+  | position       | \*width    | color                | src                | visibility     | direction     | transform\*  |
+  | top            | \*height   | box-decoration-break | line-height        | filter         | columns       | animation\*  |
+  | right          | margin\*   | box-shadow           | letter-spacing     | resize         | column-\*     |              |
+  | bottom         | padding\*  | outline\*            | quotes             | cursor         | break-\*      |              |
+  | left           | border\*   | table-layout         | counter-\*         | pointer-events | page-break-\* |              |
+  | z-index        |            | caption-side         | -ms-writing-mode   | user-select    | orphans       |              |
+  | display        |            | empty-cells          | text-\*            |                | widows        |              |
+  | vertical-align |            | list-style\*         | white-space        |                | \*zoom        |              |
+  | flex\*         |            |                      | word-\*            |                | orientation   |              |
+  | grid\*         |            |                      | overflow-wrap      |                | fill          |              |
+  | \*gap          |            |                      | tab-size           |                | stroke        |              |
+  | align-\*       |            |                      | hyphens            |                |               |              |
+  | justify-\*     |            |                      | interpolation-mode |                |               |              |
+  | order          |            |                      |                    |                |               |              |
+  | float          |            |                      |                    |                |               |              |
+  | clear          |            |                      |                    |                |               |              |
+  | object-fit     |            |                      |                    |                |               |              |
+  | overflow\*     |            |                      |                    |                |               |              |
+  | clip           |            |                      |                    |                |               |              |
 
 - 1.3.7.【参考】适时使用简写属性。`stylelint`: [declaration-block-no-shorthand-property-overrides](https://stylelint.io/user-guide/rules/declaration-block-no-shorthand-property-overrides) [declaration-block-no-redundant-longhand-properties](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties)
-
 
   常见的[简写属性](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)包括：
 
@@ -460,18 +466,18 @@ author:
   - `border-radius`
 
   使用简写属性时，需要显式地设置所有值。我们应该在真正需要设置所有值或大多数值时才使用简写属性。
-  
+
   如果只是想设置某一个属性，则不应该使用简写属性：
 
   ```css
   /* bad */
   .selector {
-    margin: 0 0 10px;
+  	margin: 0 0 10px;
   }
 
   /* good */
   .selector {
-    margin-bottom: 10px;
+  	margin-bottom: 10px;
   }
   ```
 
@@ -494,22 +500,22 @@ author:
 ## 2. `Sass` 和 `Less`
 
 > 对于 CSS 而言，可以在新项目中尝试放弃使用 `Sass`、`Less` 这样的处理器语言，因为：
-> 
->* 这些处理器语言是在一定历史条件下的产物，虽然这些产物在一定程度上提高开发者的开发效率，但不同的处理器语言也同时增加了项目的维护成本（特别是多人协作，多团队协作的时候）。
->* 更建议使用 `PostCSS` 处理器，它类似于 `CSS` 中的 `Babel`，不但具备 `Sass` 和 `Less` 的功能，而且社区繁荣，同时还可以根据自己的需求扩展相关的插件。
->* 随着 `CSS` 的一些新特性出现，`Sass` 和 `Less` 以往的优势也会慢慢消失。
+>
+> - 这些处理器语言是在一定历史条件下的产物，虽然这些产物在一定程度上提高开发者的开发效率，但不同的处理器语言也同时增加了项目的维护成本（特别是多人协作，多团队协作的时候）。
+> - 更建议使用 `PostCSS` 处理器，它类似于 `CSS` 中的 `Babel`，不但具备 `Sass` 和 `Less` 的功能，而且社区繁荣，同时还可以根据自己的需求扩展相关的插件。
+> - 随着 `CSS` 的一些新特性出现，`Sass` 和 `Less` 以往的优势也会慢慢消失。
 
 - 2.1.【推荐】四则运算符两侧各保留一个空格：
 
   ```css
   /* bad */
   .selector {
-    width: $default-width/2;
+  	width: $default-width/2;
   }
 
   /* good */
   .selector {
-    width: $default-width / 2;
+  	width: $default-width / 2;
   }
   ```
 
@@ -518,14 +524,14 @@ author:
   ```css
   /* bad */
   .selector {
-    .size(30px,20px);
-    .clearfix ();
+  	.size(30px,20px);
+  	.clearfix ();
   }
 
   /* good */
   .selector {
-    .size(30px, 20px);
-    .clearfix();
+  	.size(30px, 20px);
+  	.clearfix();
   }
   ```
 
@@ -541,7 +547,7 @@ author:
   $color-red: #f0f0f0;
 
   .selector {
-    color: $color-red;
+  	color: $color-red;
   }
   ```
 
@@ -553,13 +559,13 @@ author:
 
   ```css
   .btn {
-    background: #ccc;
-    font-weight: bold;
-    @include transition(background 0.5s ease);
+  	font-weight: bold;
+  	background: #ccc;
+  	@include transition(background 0.5s ease);
 
-    .icon {
-      margin-right: 10px;
-    }
+  	.icon {
+  		margin-right: 10px;
+  	}
   }
   ```
 
@@ -570,11 +576,11 @@ author:
 
   ```css
   .container {
-    .header {
-      .user-name {
-        // STOP！不要再嵌套更深选择器
-      }
-    }
+  	.header {
+  		.user-name {
+  			// STOP！不要再嵌套更深选择器
+  		}
+  	}
   }
   ```
 
@@ -583,7 +589,7 @@ author:
   ```css
   // 单行注释
   .selector-a {
-    padding-left: 15px;
+  	padding-left: 15px;
   }
 
   /*
@@ -591,7 +597,7 @@ author:
    * 多行注释
    */
   .selector-b {
-    margin-left: 15px;
+  	margin-left: 15px;
   }
   ```
 
@@ -599,7 +605,7 @@ author:
 
   ```css
   .selector-a {
-    padding-left: 15px;
+  	padding-left: 15px;
   }
 
   /*
@@ -607,7 +613,7 @@ author:
    * 多行注释
    */
   .selector-b {
-    margin-left: 15px;
+  	margin-left: 15px;
   }
   ```
 
@@ -615,7 +621,7 @@ author:
 
   应避免使用 `@extend` 指令，它不够直观且具有潜在风险，尤其是在嵌套选择器中。即使继承的是顶层选择器，如果选择器的顺序发生变化，也可能引起问题（比如，如果它们存在于其他文件，而加载顺序发生了变化）。
 
-  `Extend`  相比 `Mixin` 的好处是，如果无参数的 `mixin` 被多处使用，编译后会输出多段重复的代码。这时如果使用 `@extend`，可以避免这个问题。但是 `gzip` 等压缩工具就可以解决重复代码的问题，因此大多数情况下，你只需要使用 `mixin` 来让代码符合 DRY 原则。
+  `Extend` 相比 `Mixin` 的好处是，如果无参数的 `mixin` 被多处使用，编译后会输出多段重复的代码。这时如果使用 `@extend`，可以避免这个问题。但是 `gzip` 等压缩工具就可以解决重复代码的问题，因此大多数情况下，你只需要使用 `mixin` 来让代码符合 DRY 原则。
 
 ## 参考资料
 

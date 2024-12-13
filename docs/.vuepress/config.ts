@@ -1,10 +1,10 @@
-import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config';
+import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
 
 export default defineConfig4CustomTheme({
 	locales: {
 		'/': {
 			lang: 'zh-CN',
-			title: '印客学院',
+			title: '',
 			description: '前端编码规范工程化',
 		},
 	},
@@ -76,19 +76,19 @@ export default defineConfig4CustomTheme({
 			},
 		],
 		logo: '/img/logo.png',
-		repo: 'encode-studio-fe/fe-spec',
+		repo: 'Hohuade/fe-spec',
 		searchMaxSuggestions: 10,
 		docsDir: 'docs',
 		footer: {
 			createYear: 2023,
 			copyrightInfo:
-				'encode studio | <a href="https://github.com/encode-studio-fe/fe-spec" target="_blank">github</a>',
+				'encode studio | <a href="https://github.com/Hohuade/fe-spec" target="_blank">github</a>',
 		},
 
 		extendFrontmatter: {
 			author: {
-				name: '澄怀',
-				link: 'https://github.com/encode-studio-fe/fe-sepc',
+				name: 'Hohuade',
+				link: 'https://github.com/Hohuade/fe-sepc',
 			},
 		},
 	},
@@ -108,7 +108,10 @@ export default defineConfig4CustomTheme({
 		[
 			'one-click-copy',
 			{
-				copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'],
+				copySelector: [
+					'div[class*="language-"] pre',
+					'div[class*="aside-code"] aside',
+				],
 				copyMessage: '复制成功',
 				duration: 1000,
 				showInMobile: false,
@@ -126,4 +129,4 @@ export default defineConfig4CustomTheme({
 		],
 	],
 	extraWatchFiles: ['.vuepress/config.ts'],
-});
+})

@@ -1,12 +1,12 @@
 ---
 title: Node 编码规范
 categories:
-    - 编码规范
+  - 编码规范
 tags:
-    - 编码规范
+  - 编码规范
 author:
-    name: 澄怀
-    link: https://github.com/encode-studio-fe/fe-spec
+  name: Hohuade
+  link: https://github.com/Hohuade/fe-spec
 ---
 
 # Node 编码规范
@@ -21,46 +21,46 @@ author:
 
 ```javascript
 // bad
-const { Buffer } = require('buffer');
-const b = Buffer.alloc(16);
+const { Buffer } = require('buffer')
+const b = Buffer.alloc(16)
 // good
-const b = Buffer.alloc(16);
+const b = Buffer.alloc(16)
 
 // bad
-const { URL } = require('url');
-const u = new URL(s);
+const { URL } = require('url')
+const u = new URL(s)
 // good
-const u = new URL(s);
+const u = new URL(s)
 
 // bad
-const { URLSearchParams } = require('url');
-const u = new URLSearchParams(s);
+const { URLSearchParams } = require('url')
+const u = new URLSearchParams(s)
 // good
-const u = new URLSearchParams(s);
+const u = new URLSearchParams(s)
 
 // bad
-const { TextEncoder } = require('util');
-const u = new TextEncoder(s);
+const { TextEncoder } = require('util')
+const u = new TextEncoder(s)
 // good
-const u = new TextEncoder(s);
+const u = new TextEncoder(s)
 
 // bad
-const { TextDecoder } = require('util');
-const u = new TextDecoder(s);
+const { TextDecoder } = require('util')
+const u = new TextDecoder(s)
 // good
-const u = new TextDecoder(s);
+const u = new TextDecoder(s)
 
 // bad
-const process = require('process');
-process.exit(0);
+const process = require('process')
+process.exit(0)
 // good
-process.exit(0);
+process.exit(0)
 
 // bad
-const console = require('console');
-console.log('hello');
+const console = require('console')
+console.log('hello')
 // good
-console.log('hello');
+console.log('hello')
 ```
 
 - 1.2.【推荐】使用模块内支持的 `promises` API。`eslint`: [node/prefer-promises](https://github.com/mysticatea/eslint-plugin-node/tree/master/docs/rules/prefer-promises)
@@ -69,33 +69,33 @@ console.log('hello');
 
 ```javascript
 // bad
-const dns = require('dns');
-const fs = require('fs');
+const dns = require('dns')
+const fs = require('fs')
 
 function lookup(hostname) {
-  dns.lookup(hostname, (error, address, family) => {
-    // ...
-  });
+	dns.lookup(hostname, (error, address, family) => {
+		// ...
+	})
 }
 
 function readData(filePath) {
-  fs.readFile(filePath, 'utf8', (error, content) => {
-    // ...
-  });
+	fs.readFile(filePath, 'utf8', (error, content) => {
+		// ...
+	})
 }
 
 // good
-const { promises: dns } = require('dns');
-const { promises: fs } = require('fs');
+const { promises: dns } = require('dns')
+const { promises: fs } = require('fs')
 
 async function lookup(hostname) {
-  const { address, family } = await dns.lookup(hostname);
-  // ...
+	const { address, family } = await dns.lookup(hostname)
+	// ...
 }
 
 async function readData(filePath) {
-  const content = await fs.readFile(filePath, 'utf8');
-  // ...
+	const content = await fs.readFile(filePath, 'utf8')
+	// ...
 }
 ```
 
@@ -105,76 +105,76 @@ async function readData(filePath) {
 
 ```javascript
 // bad
-const Car = require('./models/car');
-const moment = require('moment');
-const mongoose = require('mongoose');
-const fs = require('fs');
-const http = require('http');
-const { Foo, Bar } = require('tool');
-const note = require('note');
+const Car = require('./models/car')
+const moment = require('moment')
+const mongoose = require('mongoose')
+const fs = require('fs')
+const http = require('http')
+const { Foo, Bar } = require('tool')
+const note = require('note')
 
 // good
-const fs = require('fs');
-const http = require('http');
+const fs = require('fs')
+const http = require('http')
 
-const { Bar, Foo } = require('tool');
-const moment = require('moment');
-const mongoose = require('mongoose');
-const note = require('note');
+const { Bar, Foo } = require('tool')
+const moment = require('moment')
+const mongoose = require('mongoose')
+const note = require('note')
 
-const Car = require('./models/car');
+const Car = require('./models/car')
 
 // bad
-import Car from './models/car';
-import moment from 'moment';
-import mongoose from 'mongoose';
-import fs from 'fs';
-import http from 'http';
-import { Foo, Bar } from 'tool';
-import note from 'note';
+import Car from './models/car'
+import moment from 'moment'
+import mongoose from 'mongoose'
+import fs from 'fs'
+import http from 'http'
+import { Foo, Bar } from 'tool'
+import note from 'note'
 
 // good
-import fs from 'fs';
-import http from 'http';
+import fs from 'fs'
+import http from 'http'
 
-import { Bar, Foo } from 'tool';
-import moment from 'moment';
-import mongoose from 'mongoose';
-import note from 'note';
+import { Bar, Foo } from 'tool'
+import moment from 'moment'
+import mongoose from 'mongoose'
+import note from 'note'
 
-import Car from './models/car';
+import Car from './models/car'
 ```
 
 - 1.4.【推荐】抛出异常时，使用原生 `Error` 对象。`eslint`: [no-throw-literal](https://eslint.org/docs/rules/no-throw-literal)
 
 ```javascript
 // bad
-throw 'error';
+throw 'error'
 
-throw 0;
+throw 0
 
-throw undefined;
+throw undefined
 
-throw null;
+throw null
 
-const err = new Error();
-throw 'an ' + err;
+const err = new Error()
+throw 'an ' + err
 
-const err = new Error();
+const err = new Error()
 throw `${err}`
 
 // good
-throw new Error();
+throw new Error()
 
-throw new Error('error');
+throw new Error('error')
 
-const err = new Error('error');
-throw err;
+const err = new Error('error')
+throw err
 
 try {
-  throw new Error('error');
+	throw new Error('error')
 } catch (err) {
-  throw err;
+	throw err
 }
 ```
 
@@ -184,24 +184,24 @@ try {
 
 ```javascript
 // bad
-const fs = require('fs');
+const fs = require('fs')
 
 function test() {
-  fs.readFileSync('./somefile', 'utf-8');
+	fs.readFileSync('./somefile', 'utf-8')
 }
 
 // good
-const { promises: fs } = require('fs');
+const { promises: fs } = require('fs')
 
 async function test() {
-  await fs.readFile('./somefile', 'utf-8');
+	await fs.readFile('./somefile', 'utf-8')
 }
 
 // good
-const fs = require('mz/fs');
+const fs = require('mz/fs')
 
 async function test() {
-  await fs.readFile('./somefile', 'utf-8');
+	await fs.readFile('./somefile', 'utf-8')
 }
 ```
 
@@ -264,14 +264,14 @@ Node.js 应用不合适做 CPU 密集型任务（例如 gzip，SSL），请尽�
 - 3.5.【推荐】使用 `util.promisify` 处理回调函数，使其返回 `Promise`。
 
 ```javascript
-const util = require('util');
-const fs = require('fs');
+const util = require('util')
+const fs = require('fs')
 
-const stat = util.promisify(fs.stat);
+const stat = util.promisify(fs.stat)
 
 async function callStat() {
-  const stats = await stat('.');
-  console.log(`This directory is owned by ${stats.uid}`);
+	const stats = await stat('.')
+	console.log(`This directory is owned by ${stats.uid}`)
 }
 ```
 
@@ -281,21 +281,20 @@ async function callStat() {
 
 ```javascript
 class Jedi {
-  jump() {
-    this.jumping = true;
-    return this;
-  }
+	jump() {
+		this.jumping = true
+		return this
+	}
 
-  setHeight(height) {
-    this.height = height;
-    return this;
-  }
+	setHeight(height) {
+		this.height = height
+		return this
+	}
 }
 
-const luke = new Jedi();
+const luke = new Jedi()
 
-luke.jump()
-  .setHeight(20);
+luke.jump().setHeight(20)
 ```
 
 ## 参考资料

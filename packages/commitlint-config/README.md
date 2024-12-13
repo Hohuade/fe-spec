@@ -1,6 +1,6 @@
 # `encode-fe-commitlint-config`
 
-> 印客学院 Git 规范
+> Git 规范
 
 支持配套的 [commitlint 配置](https://commitlint.js.org/#/concepts-shareable-config)，用于对 `git commit message` 进行校验。
 
@@ -19,7 +19,7 @@ npm install encode-fe-commitlint-config @commitlint/cli --save-dev
 ```javascript
 module.exports = {
 	extends: ['encode-fe-commitlint-config'],
-};
+}
 ```
 
 ## 设置 git hook

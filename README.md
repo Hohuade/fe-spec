@@ -1,6 +1,6 @@
 # fe-spec
 
-印客学院 前端编码规范工程化
+前端编码规范工程化
 
 ## :mountain: 能力支持
 
@@ -75,8 +75,8 @@ pnpm husky install
 
 ## :email: 联系
 
--   **印客学院官网**: <http://encodestudio.cn>
--   **前端编码规范工程化** <https://encode-studio-fe.github.io/fe-spec/>
--   **GitHub**: <https://github.com/encode-studio-fe/fe-spec>
+- **官网**: <http://encodestudio.cn>
+- **前端编码规范工程化** <https://Hohuade.github.io/fe-spec/>
+- **GitHub**: <https://github.com/Hohuade/fe-spec>
 
 </br>
