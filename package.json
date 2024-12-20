@@ -1,5 +1,5 @@
 {
-  "name": "encode-fe-spec",
+  "name": "lumos-encode-spec",
   "private": true,
   "description": "前端编码规范工程化",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "keywords": [
     "encode",
-    "fe spec"
+    "lumos spec"
   ],
   "author": "Hohuade",
   "license": "ISC",
