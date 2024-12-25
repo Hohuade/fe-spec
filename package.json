@@ -13,8 +13,7 @@
     "deploy": "bash deploy.sh",
     "publish": "lerna publish",
     "lint": "markdownlint README.md",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "prepublishOnly": "echo '请输入您的 OTP 代码：' && read otp && npm publish --otp=$otp"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "keywords": [
     "encode",
