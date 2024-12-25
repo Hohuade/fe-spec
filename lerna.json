@@ -1,15 +1,23 @@
 {
-  "version": "0.0.9",
+  "version": "independent",
   "npmClient": "pnpm",
   "useWorkspaces": true,
   "command": {
     "publish": {
       "npmClient": "npm",
       "message": "chore(release): publish %s",
-      "registry": "https://registry.npmjs.org/"
-    },
-    "packages": [
-      "packages/*"
-    ]
-  }
+      "registry": "https://registry.npmjs.org/",
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md",
+        "package-lock.json",
+        "pnpm-lock.yaml",
+        "yarn.lock"
+      ],
+      "conventionalCommits": true
+    }
+  },
+  "packages": [
+    "packages/*"
+  ]
 }
