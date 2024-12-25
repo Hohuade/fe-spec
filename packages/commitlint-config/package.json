@@ -1,6 +1,6 @@
 {
   "name": "lumos-commitlint-validator",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "index.js",
   "description": "Git规范",
   "keywords": [
