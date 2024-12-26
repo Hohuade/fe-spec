@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2024-12-26)
+
+
+### Bug Fixes
+
+* 修改lerna.json ([baa732f](https://github.com/Hohuade/fe-spec/commit/baa732f0e05b8d175a765e4197e3454cc1905130))
+
+
+
+
+
 # 0.4.0 (2024-12-26)
 
 
