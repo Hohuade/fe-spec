@@ -11,7 +11,8 @@
         "ignored-file",
         "*.md",
         "package-lock.json",
-        "yarn.lock"
+        "yarn.lock",
+        "pnpm-lock.yaml"
       ],
       "conventionalCommits": true
     }
