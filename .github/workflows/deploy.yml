@@ -26,7 +26,7 @@ jobs:
       - name: Publish to npm
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-          pnpm run publish
+          npm run publish
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
 
