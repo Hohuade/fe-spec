@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2024-12-26)
+
+
+### Features
+
+* add增加npmrc配置 ([c2cd491](https://github.com/Hohuade/fe-spec/commit/c2cd4916f30bcbc66fb504efef683dd67cb5c68d))
+
+
+
+
+
 # 0.3.0 (2024-12-26)
 
 
