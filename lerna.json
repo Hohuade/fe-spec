@@ -19,8 +19,5 @@
   },
   "packages": [
     "packages/*"
-  ],
-  "ignore": [
-    "lumos-encode-spec"
   ]
 }
