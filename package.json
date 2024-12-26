@@ -2,6 +2,7 @@
   "name": "lumos-encode-spec",
   "private": true,
   "description": "前端编码规范工程化",
+  "license": "ISC",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
@@ -20,7 +21,6 @@
     "lumos spec"
   ],
   "author": "Hohuade",
-  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.8.1",
     "husky": "^8.0.3",

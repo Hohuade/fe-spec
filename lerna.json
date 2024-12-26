@@ -6,7 +6,7 @@
     "publish": {
       "npmClient": "npm",
       "message": "chore(release): publish %s",
-      "registry": "https://registry.npmjs.org/",
+      "registry": "https://registry.npmjs.org",
       "ignoreChanges": [
         "ignored-file",
         "*.md",
@@ -19,5 +19,8 @@
   },
   "packages": [
     "packages/*"
+  ],
+  "ignore": [
+    "lumos-encode-spec"
   ]
 }
